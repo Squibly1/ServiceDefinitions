@@ -16,6 +16,19 @@
         "summary": "CreateAMSAApplicationSummary",
         "description": "Creates an application summary in Dynamics",
         "operationId": "createamsaapplicationsummary",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -27,6 +40,19 @@
       "post": {
         "summary": "CreateAMSAAssocationActivity",
         "operationId": "createamsaassocationactivity",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
         "responses": {
           "200": {
             "description": "Success"
