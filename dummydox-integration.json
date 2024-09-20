@@ -20,15 +20,7 @@
           "200": {
             "description": "Success"
           }
-        },
-        "security": [
-          {
-            "apiKeyHeader": []
-          },
-          {
-            "apiKeyQuery": []
-          }
-        ]
+        }
       }
     },
     "/CreateAMSAAssocationActivity": {
@@ -39,34 +31,8 @@
           "200": {
             "description": "Success"
           }
-        },
-        "security": [
-          {
-            "apiKeyHeader": []
-          },
-          {
-            "apiKeyQuery": []
-          }
-        ]
+        }
       }
-    }
-  },
-  "definitions": {
-    "When_a_HTTP_request_is_receivedPathsInvokeGet200ApplicationJsonResponse": {
-      "type": "object"
-    },
-    "sadfawsfr": {}
-  },
-  "securityDefinitions": {
-    "apiKeyHeader": {
-      "type": "apiKey",
-      "name": "Ocp-Apim-Subscription-Key",
-      "in": "header"
-    },
-    "apiKeyQuery": {
-      "type": "apiKey",
-      "name": "subscription-key",
-      "in": "query"
     }
   }
 }
