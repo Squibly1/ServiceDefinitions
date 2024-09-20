@@ -1,66 +1,72 @@
 {
-    "openapi": "3.0.1",
-    "info": {
-        "title": "DummyDox-Integration",
-        "description": "Azure Logic App.",
-        "version": "1.0"
-    },
-    "servers": [
-        {
-            "url": "https://dev-amsa-apim.azure-api.net/ddoxintegration"
-        }
-    ],
-    "paths": {
-        "/CreateAMSAApplicationSummary": {
-            "post": {
-                "summary": "CreateAMSAApplicationSummary",
-                "description": "Creates an application summary in Dynamics",
-                "operationId": "createamsaapplicationsummary",
-                "responses": {
-                    "200": {
-                        "description": null
-                    }
-                }
-            }
+  "swagger": "2.0",
+  "info": {
+    "title": "DummyDox-Integration",
+    "description": "Azure Logic App.",
+    "version": "1.0"
+  },
+  "host": "dev-amsa-apim.azure-api.net",
+  "basePath": "/ddoxintegration",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/CreateAMSAApplicationSummary": {
+      "post": {
+        "summary": "CreateAMSAApplicationSummary",
+        "description": "Creates an application summary in Dynamics",
+        "operationId": "createamsaapplicationsummary",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
         },
-        "/CreateAMSAAssocationActivity": {
-            "post": {
-                "summary": "CreateAMSAAssocationActivity",
-                "operationId": "createamsaassocationactivity",
-                "responses": {
-                    "200": {
-                        "description": null
-                    }
-                }
-            }
-        }
-    },
-    "components": {
-        "schemas": {
-            "When_a_HTTP_request_is_receivedPathsInvokeGet200ApplicationJsonResponse": {
-                "type": "object"
-            },
-            "sadfawsfr": {}
-        },
-        "securitySchemes": {
-            "apiKeyHeader": {
-                "type": "apiKey",
-                "name": "Ocp-Apim-Subscription-Key",
-                "in": "header"
-            },
-            "apiKeyQuery": {
-                "type": "apiKey",
-                "name": "subscription-key",
-                "in": "query"
-            }
-        }
-    },
-    "security": [
-        {
+        "security": [
+          {
             "apiKeyHeader": []
-        },
-        {
+          },
+          {
             "apiKeyQuery": []
-        }
-    ]
+          }
+        ]
+      }
+    },
+    "/CreateAMSAAssocationActivity": {
+      "post": {
+        "summary": "CreateAMSAAssocationActivity",
+        "operationId": "createamsaassocationactivity",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "security": [
+          {
+            "apiKeyHeader": []
+          },
+          {
+            "apiKeyQuery": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "When_a_HTTP_request_is_receivedPathsInvokeGet200ApplicationJsonResponse": {
+      "type": "object"
+    },
+    "sadfawsfr": {}
+  },
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "Ocp-Apim-Subscription-Key",
+      "in": "header"
+    },
+    "apiKeyQuery": {
+      "type": "apiKey",
+      "name": "subscription-key",
+      "in": "query"
+    }
+  }
 }
