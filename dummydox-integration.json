@@ -64,9 +64,22 @@
           "application/xml",
           "text/xml"
         ],
+        "parameters": [
+            {
+                "name": "request",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "$ref": "#/definitions/GetAMSAAssociationsActivityRequest"
+                }
+            }
+        ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "schema": {
+                "$ref": "#/definitions/GetAMSAAssociationsActivityResponse"
+            }
           }
         }
       }
@@ -110,6 +123,150 @@
             }
         },
         "GetAMSAApplicationSummaryResponse": {
+            "type": "object",
+            "properties": {
+                "ResponseText": {
+                    "type": "string"
+                },
+                "CorrelationId": {
+                    "format": "uuid",
+                    "type": "string",
+                    "example": "00000000-0000-0000-0000-000000000000"
+                }
+            }
+        },
+        "GetAMSAAssociationsActivityRequest": {
+            "type": "object",
+            "properties": {
+                "regardingobjectid": {
+                    "type": "string"
+                },
+                "amsa_formtype": {
+                    "type": "string"
+                },
+                "amsa_formrole": {
+                    "type": "string"
+                },
+                "amsa_customertype": {
+                    "type": "string"
+                },
+                "amsa_title": {
+                    "type": "string"
+                },
+                "amsa_firstname": {
+                    "type": "string"
+                },
+                "amsa_lastname": {
+                    "type": "string"
+                },
+                "amsa_positionheld": {
+                    "type": "string"
+                },	
+                "amsa_ABN": {
+                    "type": "string"
+                },
+                "amsa_ACN": {
+                    "type": "string"
+                },				
+                "amsa_contactaddress1": {
+                    "type": "string"
+                },
+                "amsa_contactaddress2": {
+                    "type": "string"
+                },
+                "amsa_contactsuburb": {
+                    "type": "string"
+                },
+                "amsa_contactstate": {
+                    "type": "string"
+                },
+                "amsa_contactpostcode": {
+                    "type": "string"
+                },
+                "amsa_contactcountry": {
+                    "type": "string"
+                },
+                "amsa_contactpostaladdress1": {
+                    "type": "string"
+                },
+                "amsa_contactpostaladdress2": {
+                    "type": "string"
+                },
+                "amsa_contactpostalsuburb": {
+                    "type": "string"
+                },
+                "amsa_contactpostalstate": {
+                    "type": "string"
+                },
+                "amsa_contactpostalpostcode": {
+                    "type": "string"
+                },
+                "amsa_contactpostalcountry": {
+                    "type": "string"
+                },
+                "amsa_contactphone": {
+                    "type": "string"
+                },
+                "amsa_contactmobile": {
+                    "type": "string"
+                },
+                "amsa_contactemail": {
+                    "type": "string"
+                },
+                "amsa_businessaddress1": {
+                    "type": "string"
+                },
+                "amsa_businessaddress2": {
+                    "type": "string"
+                },
+                "amsa_businesssuburb": {
+                    "type": "string"
+                },
+                "amsa_businessstate": {
+                    "type": "string"
+                },
+                "amsa_businesspostcode": {
+                    "type": "string"
+                },
+                "amsa_businesscountry": {
+                    "type": "string"
+                },
+                "amsa_businessphone": {
+                    "type": "string"
+                },
+                "amsa_businessmobile": {
+                    "type": "string"
+                },
+                "amsa_businessemail": {
+                    "type": "string"
+                },
+                "amsa_businesspostaladdress1": {
+                    "type": "string"
+                },
+                "amsa_businesspostaladdress2": {
+                    "type": "string"
+                },
+                "amsa_businesspostalsuburb": {
+                    "type": "string"
+                },
+                "amsa_businesspostalstate": {
+                    "type": "string"
+                },
+                "amsa_businesspostalpostcode": {
+                    "type": "string"
+                },
+                "amsa_businesspostalcountry": {
+                    "type": "string"
+                },
+                "amsa_legalentityname": {
+                    "type": "string"
+                },
+                "amsa_orgname": {
+                    "type": "string"
+                }
+            }
+        },
+        "GetAMSAAssociationsActivityResponse": {
             "type": "object",
             "properties": {
                 "ResponseText": {
