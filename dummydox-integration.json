@@ -29,6 +29,16 @@
           "application/xml",
           "text/xml"
         ],
+        "parameters": [
+            {
+                "name": "request",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "$ref": "#/definitions/GetAMSAApplicationSummaryRequest"
+                }
+            }
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -60,5 +70,42 @@
         }
       }
     }
-  }
+  },
+    "definitions": {
+        "GetAMSAApplicationSummaryRequest": {
+            "type": "object",
+            "properties": {
+                "amsa_trn": {
+                    "type": "string"
+                },
+                "amsa_formtype": {
+                    "type": "string"
+                },
+                "amsa_formnumber": {
+                    "type": "string"
+                },
+                "amsa_applicationoriging": {
+                    "type": "string"
+                },
+                "amsa_initiatedby": {
+                    "type": "string"
+                },
+                "amsa_receiveddate": {
+                    "type": "string"
+                },
+                "amsa_submissiondate": {
+                    "type": "string"
+                },
+                "amsa_category": {
+                    "type": "string"
+                },
+                "amsa_subtype": {
+                    "type": "string"
+                },
+                "statuscode": {
+                    "type": "string"
+                }
+            }
+        }
+    }
 }
