@@ -41,7 +41,8 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "schema": {"$ref": "#/definitions/GetAMSAApplicationSummaryResponse"}
           }
         }
       }
@@ -71,7 +72,8 @@
       }
     }
   },
-    "definitions": {
+    "definitions": 
+    {
         "GetAMSAApplicationSummaryRequest": {
             "type": "object",
             "properties": {
@@ -106,6 +108,20 @@
                     "type": "string"
                 }
             }
+        },
+        "GetAMSAApplicationSummaryResponse": {
+            "type": "object",
+            "properties": {
+                "ResponseText": {
+                    "type": "string"
+                },
+                "CorrelationId": {
+                    "format": "uuid",
+                    "type": "string",
+                    "example": "00000000-0000-0000-0000-000000000000"
+                }
+            }
         }
+        
     }
 }
